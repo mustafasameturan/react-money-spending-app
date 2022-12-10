@@ -5,9 +5,169 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #eee;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  outline: none;
+}
+
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.product{
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 24%;
+
+}
+
+.product img{
+  width: 100%;
+  height: 300px;
+}
+
+.product h6{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product .actions {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.product .price {
+  font-size: 20px;
+  color: #179b17;
+}
+
+.actions button {
+  height: 40px;
+  padding: 0 15px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.actions button[disabled]{
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.actions .amount {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.actions .buy-btn{
+  background: #61dafb;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0 4px 4px 0;
+}
+
+
+.actions .sell-btn{
+  background: #ccc;
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  border-radius: 4px 0 0 4px;
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+.header{
+  background: linear-gradient(to bottom, #20b820, #14be2a);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  position: sticky;
+  top: 0;
+}
+
+.header span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.basket-container {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-top: 50px;
+}
+
+.basket-container .footer {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-container h3{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.basket-container .basket-header{
+  border-bottom: 1px solid #ddd;
+  margin: 10px 20px 0px 20px;
+  padding: 0 20px;
+}
+
+.basket-container .footer .total{
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  color: #14be2a;
+}
+
+.basket-container .footer .basket-reset-btn{
+  background: #61dafb;
+  height: 40px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor:pointer;
+}
+
+.basket-item{
+  padding-bottom: 10px;
+  font-size: 17px;
+}
+
+.basket-item span{
+  color: #999;
 }
